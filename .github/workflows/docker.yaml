@@ -7,6 +7,10 @@ on:
 
 jobs:
   docker:
+    environment: test
+    env:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       -
