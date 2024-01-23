@@ -25,11 +25,11 @@ spec:
         image: cansentay/gke
         resources:
           requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
             cpu: 500m
             memory: 500Mi
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
         env:
         - name: DB_CONFIG
           valueFrom:
@@ -88,11 +88,11 @@ spec:
         image: postgres
         resources:
           requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
             cpu: 500m
             memory: 500Mi
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
         env:
         - name: POSTGRES_PASSWORD
           valueFrom:
